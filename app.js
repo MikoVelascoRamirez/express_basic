@@ -23,6 +23,12 @@ app.get('/explorersInNode', (req, res) => {
     res.send(explorer);
 });
 
+//Agregando nueva ruta que reciba Query Params
+app.get('/explorers/:explorerName', (req, res) => {
+    console.log(req)
+    res.send(req.params);
+});
+
 //Inicializando la app
 app.listen(port, () => {
     console.log(`Example app listening at port ${port}`)
